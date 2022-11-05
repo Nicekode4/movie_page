@@ -13,7 +13,7 @@ const rating = [
 ]
 
 const url = 'http://api.tvmaze.com/shows'
-let apiData;
+let apiData = []
 const contents = document.querySelector('#content')
 let theDay = new Date().getDay()
 let day;
