@@ -53,7 +53,7 @@ fetch(url)
     //parsing our data
 })
 .then(data => {
-
+console.log(data);
     apiData = data
 
     //Our parsed data
