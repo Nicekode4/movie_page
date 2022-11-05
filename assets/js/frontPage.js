@@ -45,7 +45,7 @@ switch(theDay)
   default:
     day="Invalid day";
 }
-console.log(day);
+
 function fetchCall(){
 fetch(url)
 .then(response => {
@@ -53,9 +53,9 @@ fetch(url)
     //parsing our data
 })
 .then(data => {
-    console.log(data);
+
     apiData = data
-    console.log(apiData[0].rating.average);
+
     //Our parsed data
 })
 .catch(error => {
@@ -63,7 +63,7 @@ fetch(url)
     //On error
 })
 .finally(() => {
-  console.log(Math.round(apiData[1].rating.average));
+
   apiData.sort()
 
 for (let index = 0; index < apiData.length; index++) {
@@ -74,7 +74,7 @@ for (let index = 0; index < apiData.length; index++) {
   if (element.schedule.days == day) {
           if (element.rating.average >= 8) {
            
-             console.log(element.name)
+
         contents.innerHTML += `
       <article id="${apiData.indexOf(element)}">
 <h3>${element.schedule.time}<span>${apiData[number].network.name}</span></h3>

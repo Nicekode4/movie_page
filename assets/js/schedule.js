@@ -43,7 +43,7 @@ switch(theDay)
   default:
     day="Invalid day";
 }
-console.log(day);
+
 function fetchCall(){
 fetch(url)
 .then(response => {
@@ -51,9 +51,9 @@ fetch(url)
     //parsing our data
 })
 .then(data => {
-    console.log(data);
+
     apiData = data
-    console.log(apiData[0].rating.average);
+
     //Our parsed data
 })
 .catch(error => {
@@ -62,14 +62,14 @@ fetch(url)
 })
 .finally(() => {
   window.localStorage.setItem('fetch', apiData)
-    console.log();
+
     contents.innerHTML = 
     `<h2>The CW</h2>`
 
     apiData.forEach(element => {
 if (element.schedule.days == day) {
 if (element.network.name == "The CW") {
-          console.log(element.rating.average);  
+
           
           contents.innerHTML += `
         <article id="${apiData.indexOf(element)}">
@@ -118,7 +118,7 @@ function Clear(obj) {
         if (element.schedule.days == day) {
             if (element.network.name == obj.value) {
               
-            console.log(apiData.indexOf(element));
+
           
           contents.innerHTML += `
         <article id="${apiData.indexOf(element)}">
