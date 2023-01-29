@@ -12,7 +12,7 @@ const rating = [
   {10: "🔥"} ,
 ]
 
-const url = 'http://api.tvmaze.com/shows'
+const url = 'https://api.tvmaze.com/shows'
 let apiData = []
 const contents = document.querySelector('#content')
 let theDay = new Date().getDay()
